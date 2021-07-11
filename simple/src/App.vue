@@ -1,21 +1,28 @@
 <template>
-  <div id="app">
+  <div id="app" :style="myStyle">
     <img alt="Vue logo" src="./assets/myPOV.png">
-<!--    <HelloWorld msg="myPOV"/>-->
-    <Dashboard func="LOGIN"/>
+<!--    <Login func="LOGIN"/>-->
+    <Signup func="SIGNUP"/>
+<!--    <Home finc="HOME"/>-->
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import Dashboard from "./components/Dashboard";
+// import Login from "./components/Login";
+import Signup from "./components/Signup";
+// import Home from "./components/Home";
 
 export default {
   name: 'App',
   components: {
-    Dashboard
+    // Home
+    // Login,
+    Signup
+
     // HelloWorld
   }
+
 }
 </script>
 

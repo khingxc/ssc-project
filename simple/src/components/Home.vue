@@ -1,20 +1,21 @@
 <template>
   <div class="text-center">
 <!--    <p>HOME</p>-->
-    <button
+    <v-btn
         rounded
-        color="primary"
+        color="blue"
         x-large
     >
     Log In
-    </button><br>
-    <button
+    </v-btn><br>
+    <br>
+    <v-btn
         rounded
-        color="primary"
+        color="blue"
         x-large
     >
       Sign Up
-    </button>
+    </v-btn>
   </div>
 </template>
 

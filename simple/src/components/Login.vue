@@ -17,10 +17,13 @@
       v-model="valid"
       lazy-validation
   >
+
+    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+
     <v-text-field
-        v-model="username"
-        :rules="usernameRules"
-        label="Username"
+        v-model="displayName"
+        :rules="displayNameRules"
+        label="Display Name"
         required
     ></v-text-field>
 
@@ -48,16 +51,16 @@
 export default {
   data: () => ({
     valid: true,
-    username: '',
+    displayName: '',
     password: '',
-    usernameRules: [v => !!v || 'Username is required'],
+    displayNameRules: [v => !!v || 'Display Name is required'],
     passwordRules: [v => !!v || 'Password is required'],
   }),
 
   methods: {
     submit () {
       this.$refs.form.validate()
-      console.log(this.username, this.password)
+      console.log(this.displayName, this.password)
     },
   },
 }

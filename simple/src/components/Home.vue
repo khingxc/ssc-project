@@ -1,6 +1,7 @@
 <template>
   <div class="text-center">
 <!--    <p>HOME</p>-->
+    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
     <v-btn
         rounded
         color="blue"

@@ -1,9 +1,20 @@
 <template>
+
+
   <v-form
       ref="form"
       v-model="valid"
       lazy-validation
   >
+
+
+<!--    <v-img-->
+<!--        src="require('/assets/myPOV.png')"-->
+<!--        height="248px"-->
+<!--        width="351px"-->
+<!--    ></v-img>-->
+    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+
     <v-text-field
         v-model="email"
         :rules="emailRules"
@@ -12,10 +23,10 @@
     ></v-text-field>
 
     <v-text-field
-        v-model="username"
+        v-model="displayName"
         :counter="30"
-        :rules="usernameRules"
-        label="Username"
+        :rules="displayNameRules"
+        label="Display Name"
         required
     ></v-text-field>
 
@@ -62,19 +73,18 @@ export default {
   data: () => ({
     valid: true,
     email: '',
-    username: '',
+    displayName: '',
     password: '',
     confirmPassword: '',
     emailRules: [
       v => !!v || 'E-mail is required',
       v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
     ],
-    usernameRules: [
-      v => !!v || 'Name is required',
-      v => (v && v.length <= 30) || 'Name must be less than 30 characters',
+    displayNameRules: [
+      v => !!v || 'Display name is required',
+      v => (v && v.length <= 30) || 'Display name must be less than 30 characters',
     ],
     passwordRules: [
-        //TODO: password rule
       v => !!v || 'Password is required',
       v => (v && v.length >= 6) || 'Password must have at least 6 characters',
       v => /(?=.*[A-Z])/.test(v) || 'Must have one uppercase character',
@@ -146,5 +156,12 @@ export default {
 <!--</script>-->
 
 <style scoped>
-
+#signup {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 </style>

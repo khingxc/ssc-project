@@ -98,6 +98,8 @@
   </v-container>
 </template>
 
+import moment from 'moment'
+
 <script>
 export default {
   name: "SelfChecklist",

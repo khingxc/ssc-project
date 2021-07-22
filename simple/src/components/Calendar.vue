@@ -1,9 +1,10 @@
-<template>
+<template >
   <div>
     <v-sheet
         tile
         height="54"
         class="d-flex"
+        :style="{ background: '#EDBB99'}"
     >
       <v-btn
           icon
@@ -42,6 +43,7 @@
           :event-overlap-threshold="30"
           :event-color="getEventColor"
           @change="getEvents"
+
       ></v-calendar>
     </v-sheet>
   </div>

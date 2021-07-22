@@ -21,9 +21,9 @@
     <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
 
     <v-text-field
-        v-model="displayName"
-        :rules="displayNameRules"
-        label="Display Name"
+        v-model="email"
+        :rules="emailRules"
+        label="E-mail"
         required
     ></v-text-field>
 
@@ -51,9 +51,12 @@
 export default {
   data: () => ({
     valid: true,
-    displayName: '',
+    email: '',
     password: '',
-    displayNameRules: [v => !!v || 'Display Name is required'],
+    emailRules: [
+      v => !!v || 'E-mail is required',
+      v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+    ],
     passwordRules: [v => !!v || 'Password is required'],
   }),
 

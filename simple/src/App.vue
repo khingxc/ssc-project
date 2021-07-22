@@ -1,8 +1,8 @@
 <template>
   <v-app>
-<!--            <Login func="LOGIN"/>-->
+            <Login func="LOGIN"/>
 <!--        <Signup func="SIGNUP"/>-->
-    <Home func="HOME"/>
+<!--    <Home func="HOME"/>-->
 <!--        <Calendar func="CALENDAR"/>-->
 <!--    <SelfChecklist func="SELFCHECKLIST"/>-->
 
@@ -10,9 +10,9 @@
 </template>
 
 <script>
-// import Login from "./components/Login";
+import Login from "./components/Login";
 // import Signup from "./components/Signup";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 // import SelfChecklist from "./components/SelfChecklist";
 // import Calendar from "./components/Calendar";
 export default {
@@ -20,8 +20,8 @@ export default {
   components: {
     // SelfChecklist,
     // Calendar,
-    Home
-    // Login,
+    // Home
+    Login,
     // Signup
     // HelloWorld
   }

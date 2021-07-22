@@ -16,34 +16,44 @@
       ref="form"
       v-model="valid"
       lazy-validation
+
+
   >
+    <v-app :style="{ background: '#FDEDEC'}">
+      <v-container>
+        <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
 
-    <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+        <v-text-field
+            v-model="email"
+            :rules="emailRules"
+            label="E-mail"
+            required
 
-    <v-text-field
-        v-model="email"
-        :rules="emailRules"
-        label="E-mail"
-        required
-    ></v-text-field>
+        ></v-text-field>
 
-    <v-text-field
-        type="password"
-        v-model="password"
-        :rules="passwordRules"
-        label="Password"
-        required
-    ></v-text-field>
+        <v-text-field
+            type="password"
+            v-model="password"
+            :rules="passwordRules"
+            label="Password"
+            required
+        ></v-text-field>
 
 
-    <v-btn
-        :disabled="!valid"
-        color="blue"
-        class="mr-4"
-        @click="submit"
-    >
-      Log In
-    </v-btn>
+        <v-btn
+            :disabled="!valid"
+            color="#D2B4DE"
+            class="mx-auto"
+            @click="submit"
+            :style="{left: '50%', transform:'translateX(-50%)'}"
+        >
+          Log In
+        </v-btn>
+
+
+      </v-container>
+    </v-app>
+
 
   </v-form>
 </template>

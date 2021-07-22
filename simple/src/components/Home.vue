@@ -1,7 +1,7 @@
 <template>
-  <div class="text-center">
+  <div class="text-center" v-bind:style="{ backgroundColor: '#FDEDEC'}">
 <!--    <p>HOME</p>-->
-    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+    <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
     <v-btn
         rounded
         color="blue"

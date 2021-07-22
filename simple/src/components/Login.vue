@@ -18,7 +18,7 @@
       lazy-validation
   >
 
-    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+    <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
 
     <v-text-field
         v-model="displayName"

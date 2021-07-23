@@ -1,9 +1,10 @@
-<template>
+<template >
   <div>
     <v-sheet
         tile
         height="54"
         class="d-flex"
+        :style="{ background: '#EDBB99'}"
     >
       <v-btn
           icon
@@ -42,6 +43,7 @@
           :event-overlap-threshold="30"
           :event-color="getEventColor"
           @change="getEvents"
+
       ></v-calendar>
     </v-sheet>
   </div>
@@ -50,33 +52,33 @@
 
 <script>
 export default {
+
   data: () => ({
     type: 'month',
     types: ['month', 'week', 'day'],
     mode: 'stack',
     weekday: [0, 1, 2, 3, 4, 5, 6],
-
     value: '',
     events: [],
     colors: ['blue', 'indigo', 'deep-purple', 'cyan', 'green', 'orange', 'grey darken-1'],
     names: [],
   }),
+
+  name: "Calendar",
+
   methods: {
     getEvents ({ start, end }) {
       const events = []
-
       const min = new Date(`${start.date}T00:00:00`)
       const max = new Date(`${end.date}T23:59:59`)
       const days = (max.getTime() - min.getTime()) / 86400000
       const eventCount = this.rnd(days, days + 20)
-
       for (let i = 0; i < eventCount; i++) {
         const allDay = 0
         const firstTimestamp = 0
         const first = new Date(firstTimestamp - (firstTimestamp % 900000))
         const secondTimestamp = 0
         const second = new Date(first.getTime() + secondTimestamp)
-
         events.push({
           name: this.names[''],
           start: first,
@@ -85,7 +87,6 @@ export default {
           timed: !allDay,
         })
       }
-
       this.events = events
     },
     getEventColor (event) {
@@ -99,5 +100,4 @@ export default {
 </script>
 
 <style scoped>
-
 </style>

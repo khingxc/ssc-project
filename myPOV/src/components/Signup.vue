@@ -5,15 +5,16 @@
       ref="form"
       v-model="valid"
       lazy-validation
+      :style="{ background: '#FDEDEC'}"
   >
 
 
-<!--    <v-img-->
-<!--        src="require('/assets/myPOV.png')"-->
-<!--        height="248px"-->
-<!--        width="351px"-->
-<!--    ></v-img>-->
-    <v-img src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
+    <!--    <v-img-->
+    <!--        src="require('/assets/myPOV.png')"-->
+    <!--        height="248px"-->
+    <!--        width="351px"-->
+    <!--    ></v-img>-->
+    <v-img class="mx-auto" src="@/assets/myPOV.png" height="248px" width="351px"></v-img>
 
     <v-text-field
         v-model="email"
@@ -50,18 +51,21 @@
 
 
     <v-btn
+        to="/login"
         :disabled="!valid"
-        color="blue"
+        color="#D2B4DE"
         class="mr-4"
         @click="validate"
+        :style="{left: '45%', transform:'translateX(-50%)'}"
     >
       Sign Up
     </v-btn> &ensp;
 
     <v-btn
-        color="blue"
+        color="warning"
         class="mr-4"
         @click="reset"
+        :style="{left: '45%', transform:'translateX(-50%)'}"
     >
       Reset Form
     </v-btn>
@@ -156,12 +160,4 @@ export default {
 <!--</script>-->
 
 <style scoped>
-#signup {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
 </style>
